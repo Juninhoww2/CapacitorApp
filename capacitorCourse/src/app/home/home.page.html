@@ -1,10 +1,17 @@
-<ion-content>
-  <ion-searchbar animated> 
-
-  </ion-searchbar>
-</ion-content>
-
-<ion-header >
+<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar color="danger">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item href="#">Home</ion-item>
+      <ion-item>About</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-header > 
   <ion-toolbar>
     <ion-title>
      Hello World!
@@ -12,14 +19,34 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
+ <ion-chip>
+   <ion-label>Default</ion-label>
+  <ion-avatar>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+ </ion-chip>
+
+    <ion-searchbar animated> 
+  
+    </ion-searchbar>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>
+          Card Subtitle
+        </ion-card-subtitle>
+        <ion-card-title>
+          Card Title
+        </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  <ion-button color="danger"></ion-button>
+  <ion-button color="tertiary"></ion-button>
   <ion-button></ion-button>
   <ion-button></ion-button>
   <ion-button></ion-button>
-  <ion-button></ion-button>
-  <ion-button></ion-button>
-</ion-content>
-<ion-content>
-  <ion-fab vertical="center" horizontal="center" slot="fixed">
+  <ion-button color="tertiary"></ion-button>
+  <ion-button color="danger"></ion-button>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
     <ion-fab-button>
       <ion-icon name="share"></ion-icon>
     </ion-fab-button>
@@ -36,28 +63,20 @@
       <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
     </ion-fab-list>
   </ion-fab>
-</ion-content>
-<ion-content>
   <ion-list>
     <ion-item>
       <ion-range color="tertiary" pin="true"></ion-range>
     </ion-item>
   </ion-list>
-</ion-content>
-<ion-content>
   <ion-list>
     <ion-item>
       <ion-range color="danger" pin="true"></ion-range>
     </ion-item>
   </ion-list>
-</ion-content>
-<ion-content>
   <ion-range min="10" max="100" step="2">
     <ion-range size="small" slot="start" name="sunny"></ion-range>
     <ion-range slot="end" name="sunny"></ion-range>
   </ion-range>
-</ion-content>
-<ion-content>
   <ion-card>
     <ion-card-header>
       <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
@@ -67,17 +86,35 @@
       Awesome content
     </ion-card-content>
   </ion-card>
-  
-</ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+      <ion-card-title>Awesome Title</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Awesome content
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-item href="#" class="ion-activated">
+      <ion-icon name="wifi" slot="start"></ion-icon>
+      <ion-label>Card link item 1 activated</ion-label>
+    </ion-item>
 
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
-      <ion-card-title>Awesome Title</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Awesome content
-    </ion-card-content>
+    <ion-item href="#">
+      <ion-icon name="wine" slot="start"></ion-icon>
+      <ion-label>Card Link Item 2</ion-label>
+    </ion-item>
+
+    <ion-item  href="#" class="ion-activated">
+      <ion-icon name="warning" slot="start"></ion-icon>
+      <ion-label>Card Buutton Item 1 activated</ion-label> 
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="walk" slot="start"></ion-icon>
+      <ion-label>Card Button Item 2 activated</ion-label>
+    </ion-item>
   </ion-card>
 </ion-content>
+<ion-router-outlet id="main"></ion-router-outlet>
